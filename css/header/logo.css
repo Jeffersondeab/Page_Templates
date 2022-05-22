@@ -1,9 +1,13 @@
+.logo{
+    margin-left: 3.1rem;
+    margin-top: 2.1rem;
+}
 
 
-
-.logo_link{
+.logo__link{
     background-color: rgb(0, 0, 0);
-    padding: 3rem;
-    margin-left: 3rem;
+    display: inline-block;
+    height: 15rem;
+    width: 7rem;
 }
 
