@@ -1,3 +1,4 @@
 @import url('conf_gerais/reset.css');
-@import url('header/logo.css');
-@import url('header/menu_nav.css');
+@import url('layout/logo.css');
+@import url('layout/menu_nav.css');
+@import url('layout/header_global.css');
