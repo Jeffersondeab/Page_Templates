@@ -5,8 +5,9 @@
 }
 
 .nav-menu__link{
+    color: black;
+    font-weight: bold;
     padding: 1.5rem;
-
 }
 
  
