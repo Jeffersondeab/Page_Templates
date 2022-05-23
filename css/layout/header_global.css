@@ -2,5 +2,10 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    transition: background-color .3s;
+    width: 100%;
 }
+
+
 
