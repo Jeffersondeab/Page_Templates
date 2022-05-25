@@ -1,12 +1,14 @@
-const teste = document.querySelector('[teste]')
+const menuMobile = document.querySelector('[data-menu-mobile]')
 
 
-function tss(){
-    teste.style.backgroundColor = 'blue'
+function toggleMenu(){
+    if(event.type === 'touchstart') event.preventDefault()
+    
 }
 
+
 function setListeners(){
-    window.addEventListener('click', tss)
+    window.addEventListener('click', toggleMenu )
 }
 
 

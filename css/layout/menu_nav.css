@@ -1,13 +1,14 @@
-
-
 .nav-menu{
     display: flex;
+    gap: .3rem;
 }
 
 .nav-menu__link{
     color: black;
     font-weight: bold;
-    padding: 1.5rem;
+    padding: 2rem;
 }
+
+
 
  

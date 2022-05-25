@@ -1,0 +1,71 @@
+.btn-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .nav-menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        background: #e7e7e7;
+        height: 0;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden; 
+        overflow-y: hidden;
+    }
+
+    .header_navigation.active .nav-menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .nav-menu .nav-menu__link {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    .btn-mobile{
+        display: flex;
+        padding:.5rem .1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .hamburger{
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    .hamburger::after, .hamburger::before{
+        content: '';
+        background: currentColor;
+        display: block;
+        height: 2px;
+        margin-top:5px;
+        position: relative;
+        transition: .3s;
+        width: 20px;
+    }
+
+    .nav-menu.active .hamburger{
+        border-top-color: transparent;
+    }
+
+    .nav-menu.active .hamburger::after{
+        transform: rotate(-135deg);
+    }
+
+    .nav-menu.active .hamburger::before{
+        transform: rotate(135deg);
+        top: 7px;
+    }
+
+}
