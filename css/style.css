@@ -1,6 +1,11 @@
+/* header */
+
 @import url('conf_gerais/reset.css');
-@import url('componentes/menu_mobile.css');
-@import url('layout/logo.css');
-@import url('layout/menu_nav.css');
-@import url('layout/header_global.css');
-@import url('layout/menu_mobile.css');
+@import url('header/menu_mobile.css');
+@import url('header/logo.css');
+@import url('header/menu_nav.css');
+@import url('header/header_global.css');
+
+/* main */
+
+@import url('main/image_center.css');
