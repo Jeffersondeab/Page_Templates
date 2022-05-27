@@ -1,0 +1,17 @@
+.section-one{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section-one__text{
+    padding-left: 13rem;
+    padding-top: 5rem;
+}
+
+
+.section-one__image{
+    background-color: #adadad;
+    width: 25%;
+    height: 15rem;
+}
