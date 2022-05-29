@@ -1,17 +1,36 @@
+
 .section-one{
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
 }
 
 
 .section-one__text{
-    padding-left: 13rem;
+    margin-left: 13rem;
     padding-top: 5rem;
 }
 
 
 .section-one__image{
     background-color: #adadad;
-    width: 25%;
+    margin: 5rem;
+    width: 30rem;
     height: 15rem;
+}
+
+@media screen and (max-width:1024px) {
+
+    .section-one{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-one__image{
+        margin: ;
+    }
+
+    .section-one__text {
+        margin: auto;
+       text-align: center;
+    }
 }
