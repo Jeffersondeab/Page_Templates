@@ -5,7 +5,7 @@
 
 
 .section-one__text{
-    margin-left: 13rem;
+    margin-left: 10rem;
     padding-top: 5rem;
 }
 
@@ -13,9 +13,11 @@
 .section-one__image{
     background-color: #adadad;
     margin: 5rem;
-    width: 30rem;
+    margin-right: 10rem;
+    width: 65vh;
     height: 15rem;
 }
+
 
 @media screen and (max-width:1024px) {
 
@@ -26,11 +28,13 @@
     }
 
     .section-one__image{
-        margin: ;
+        margin: 0;
+        width: 50vw;
     }
 
     .section-one__text {
-        margin: auto;
+       margin: auto;
+       padding-bottom: 5rem;
        text-align: center;
     }
 }
