@@ -1,0 +1,23 @@
+.carousel{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-slider{
+    border-radius: 100%;
+    cursor: pointer;
+    position: absolute;
+    padding: 1rem;
+    margin: 0 3.6rem;
+}
+
+.arrow-slider--left{
+    left: 0;
+}
+
+.arrow-slider--right{
+    right: 0;
+}
+
