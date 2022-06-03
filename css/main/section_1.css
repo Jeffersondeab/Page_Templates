@@ -1,19 +1,18 @@
-
 .section-one{
-    display: inline-flex;
+    display: flex;
+    width: 90vw;
 }
 
 
 .section-one__text{
-    margin-left: 10rem;
     padding-top: 5rem;
+    margin-left: 10vw;
 }
 
 
 .section-one__image{
     background-color: #adadad;
-    margin: 5rem;
-    margin-right: 10rem;
+    margin-top: 5rem;
     width: 65vh;
     height: 15rem;
 }

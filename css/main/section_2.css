@@ -1,0 +1,19 @@
+
+
+.center-carousel__list{
+    display: flex;
+    justify-content: center;
+}
+
+.center-carousel__item{
+    background-color: grey;
+    height: 12rem;
+    margin: .5rem;
+    width: calc(80vw / 5);
+}
+
+
+
+.center-carousel__cover{
+
+}
