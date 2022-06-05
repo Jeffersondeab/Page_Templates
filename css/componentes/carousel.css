@@ -1,0 +1,17 @@
+.carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.center-carousel__list{
+    display: flex;
+}
+
+.center-carousel__item{
+    background-color: grey;
+    height: 12rem;
+    margin: .5rem;
+    width: calc(75.4vw / 5);
+}
