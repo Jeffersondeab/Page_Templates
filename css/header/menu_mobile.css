@@ -19,7 +19,7 @@
         background: #e7e7e7;
         height: 0;
         transition: .6s;
-        z-index: 1000;
+        z-index: 1;
         visibility: hidden; 
         overflow-y: hidden;
     }
