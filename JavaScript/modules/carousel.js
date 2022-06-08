@@ -117,7 +117,7 @@ const setListeners = () => {
         item.addEventListener('dragstart', preventDefault)
         item.addEventListener('mousedown', (event) => {
                 onMouseDown(event, index)
-            })
+            }),
         item.addEventListener('mouseup', onMouseUp)
         item.addEventListener('mouseleave', onMouseLeave)
     })
@@ -135,6 +135,7 @@ const init = () => {
 export default {
     init
 }
+
 
 
 
