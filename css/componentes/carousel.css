@@ -1,8 +1,8 @@
 .carousel{
-    position: relative;
-    display: flex;
     align-items: center;
+    display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .center-carousel__list{

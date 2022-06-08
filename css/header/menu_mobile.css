@@ -8,52 +8,52 @@
 
 
     .nav-menu{
+        align-items: center;
+        background: #e7e7e7;
         display: flex;
         flex-direction: column;
-        align-items: center;
         line-height: 3rem;
-        position: absolute;
-        width: 100%;
-        top: 3.7rem;
-        right: 0;
-        background: #e7e7e7;
         height: 0;
-        transition: .6s;
-        z-index: 1;
-        visibility: hidden; 
         overflow-y: hidden;
+        position: absolute;
+        top: 3.7rem;
+        right: 0;  
+        transition: .6s;
+        visibility: hidden; 
+        width: 100%;
+        z-index: 1;  
     }
 
 
     .header_navigation.active .nav-menu{
         height: calc(100vh - 60px);
-        visibility: visible;
         overflow-y: auto;
+        visibility: visible;
     }
 
     .nav-menu .nav-menu__link {
-        padding: 1rem 0;
-        margin: 0 1rem;
         border-bottom: 2px solid rgba(0, 0, 0, .05);
+        margin: 0 1rem;
+        padding: 1rem 0;
     }
 
     .btn-mobile{
-        display: flex;
-        padding: 1rem 1.5rem 1rem;
-        font-size: 1rem; 
         border: none;
         background: none;
         cursor: pointer;
+        display: flex;
+        padding: 1rem 1.5rem 1rem;
+        font-size: 1rem;  
     }
 
     .hamburger{
-        width: 20px;
         border-top: 2px solid;
+        width: 20px;
     }
 
     .hamburger::after, .hamburger::before{
-        content: '';
         background: currentColor;
+        content: '';
         display: block;
         height: 2px;
         margin-top:5px;

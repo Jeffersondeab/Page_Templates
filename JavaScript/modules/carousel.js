@@ -3,6 +3,7 @@ const carouselList = document.querySelector('[data-carousel="list"]')
 const carouselItem = document.querySelectorAll('[data-carousel="item"]')
 const btnNext = document.querySelector('[data-carousel="btn-next"]')
 const btnPrevious = document.querySelector('[data-carousel="btn-previous"]')
+let itemsPerSlide = 5
 
 const state = {
     mouseDownPosition: 0,
@@ -26,10 +27,18 @@ const getCenterPosition = (slideIndex) => {
     const item = carouselItem[state.currentItemIndex] 
     const itemWidth = item.offsetWidth
     const bodyWidth = document.body.clientWidth
-    const slideWidth = itemWidth * 5
-    const margin = (bodyWidth - slideWidth) / 2.65
+    const slideWidth = itemWidth * itemsPerSlide
+    const margin = (bodyWidth - slideWidth) / 2
     return margin - (slideWidth * slideIndex)
 }
+
+const getLastSlideIndex = () => {
+    const {carouselItem} = collectionData
+    [currentCollectionIndex]
+    const lastItemIndex = carouselItem.length - 1
+    return Math.floor(lastItemIndex / itemsPerSlide)
+}
+
 
 const animateTransition = (active) =>{
     if(active){
@@ -55,8 +64,8 @@ const backwardSlide = () => {
 }
 
 const forwardSlide = () => {
-    const lastItemIndex = carouselItem.length - 1
-    const lastSlideIndex = Math.floor(lastItemIndex / 5)
+    const {state}= collectionData[currentCollectionIndex]
+    const lastSlideIndex = getLastSlideIndex()
     if(state.currentSlideIndex < lastSlideIndex){
        setVisibleSlide(state.currentSlideIndex + 1) 
     }else{
@@ -65,9 +74,10 @@ const forwardSlide = () => {
 }
 
 
-const onMouseDown = (event, index) => {
+const onMouseDown = (event, itemIndex) => {
+    const {state} = collectionData[currentCollectionIndex]
     const item = event.currentTarget
-    state.currentItemIndex = index
+    state.currentItemIndex = itemIndex
     state.mouseDownPosition = event.clientX
     state.currentSlidePosition = event.clientX - state.lastTranslatePosition
     animateTransition(false)
@@ -113,6 +123,9 @@ const setListeners = () => {
     })
 }
 
+
+
+
 const init = () => {
     setListeners()
     setVisibleSlide(0)
@@ -122,3 +135,6 @@ const init = () => {
 export default {
     init
 }
+
+
+
