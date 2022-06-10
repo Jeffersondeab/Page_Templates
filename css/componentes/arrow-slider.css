@@ -2,10 +2,10 @@
 .arrow-slider{
     border-radius: 100%;
     cursor: pointer;
-    position: absolute;
+    position:absolute;
+    z-index: 9;
     padding: 1rem;
     margin: 0 3.6rem;
-    z-index: 1;
 }
 
 .arrow-slider--left{

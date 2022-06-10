@@ -3,7 +3,7 @@ const carouselList = document.querySelector('[data-carousel="list"]')
 const carouselItem = document.querySelectorAll('[data-carousel="item"]')
 const btnNext = document.querySelector('[data-carousel="btn-next"]')
 const btnPrevious = document.querySelector('[data-carousel="btn-previous"]')
-let itemsPerSlide = 5
+ 
 
 const state = {
     mouseDownPosition: 0,
@@ -14,9 +14,7 @@ const state = {
     currentSlideIndex: 0
 }
 
-const preventDefault = (event) => {
-    event.preventDefault()
-}
+ 
 
 const translateSlide = (position) => {
     state.lastTranslatePosition = position
@@ -27,18 +25,12 @@ const getCenterPosition = (slideIndex) => {
     const item = carouselItem[state.currentItemIndex] 
     const itemWidth = item.offsetWidth
     const bodyWidth = document.body.clientWidth
-    const slideWidth = itemWidth * itemsPerSlide
+    const slideWidth = itemWidth * 5
     const margin = (bodyWidth - slideWidth) / 2
     return margin - (slideWidth * slideIndex)
 }
 
-const getLastSlideIndex = () => {
-    const {carouselItem} = collectionData
-    [currentCollectionIndex]
-    const lastItemIndex = carouselItem.length - 1
-    return Math.floor(lastItemIndex / itemsPerSlide)
-}
-
+ 
 
 const animateTransition = (active) =>{
     if(active){
@@ -64,8 +56,8 @@ const backwardSlide = () => {
 }
 
 const forwardSlide = () => {
-    const {state}= collectionData[currentCollectionIndex]
-    const lastSlideIndex = getLastSlideIndex()
+    const lastItemIndex = carouselItem.length - 1
+    const lastSlideIndex = Math.floor(lastItemIndex / 5)
     if(state.currentSlideIndex < lastSlideIndex){
        setVisibleSlide(state.currentSlideIndex + 1) 
     }else{
@@ -74,10 +66,9 @@ const forwardSlide = () => {
 }
 
 
-const onMouseDown = (event, itemIndex) => {
-    const {state} = collectionData[currentCollectionIndex]
+const onMouseDown = (event, index) => {
     const item = event.currentTarget
-    state.currentItemIndex = itemIndex
+    state.currentItemIndex = index
     state.mouseDownPosition = event.clientX
     state.currentSlidePosition = event.clientX - state.lastTranslatePosition
     animateTransition(false)
@@ -112,9 +103,6 @@ const setListeners = () => {
     btnNext.addEventListener('click', forwardSlide)
     btnPrevious.addEventListener('click', backwardSlide)
     carouselItem.forEach((item, index) => {
-        const link = item.querySelector('.center-carousel__link')
-        link.addEventListener('click', preventDefault)
-        item.addEventListener('dragstart', preventDefault)
         item.addEventListener('mousedown', (event) => {
                 onMouseDown(event, index)
             }),
