@@ -25,7 +25,7 @@ const getCenterPosition = (slideIndex) => {
     const item = carouselItem[state.currentItemIndex] 
     const itemWidth = item.offsetWidth
     const bodyWidth = document.body.clientWidth
-    const slideWidth = itemWidth * 6.5
+    const slideWidth = itemWidth * 5
     const margin = (bodyWidth - slideWidth) / 2
     return margin - (slideWidth * slideIndex)
 }
@@ -82,9 +82,9 @@ const onMouseMove = (event) => {
 }
 
 const onMouseUp = (event) => {
-    if(state.movement > 200){
+    if(state.movement > 150){
         backwardSlide()
-    }else if (state.movement < -200){
+    }else if (state.movement < -150){
         forwardSlide()
     }else{
         setVisibleSlide(state.currentSlideIndex)
