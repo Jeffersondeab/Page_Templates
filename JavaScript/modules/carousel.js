@@ -13,7 +13,6 @@ const state = {
     currentSlidePosition: 0,
     currentItemIndex: 0,
     currentSlideIndex: 0
-     
 }
 
  
@@ -89,7 +88,9 @@ const onMouseMove = (event) => {
 
 
 const onMouseUp = (event) => {
-    if(state.movement === carouselItem){
+    if(state.movement < carouselItem){
+        setVisibleSlide(state.currentSlideIndex)
+    }else if(state.movement >  - 10){
         setVisibleSlide(state.currentSlideIndex)
     } 
     const item = event.currentTarget
