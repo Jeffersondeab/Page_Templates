@@ -123,7 +123,6 @@ const setListeners = () => {
 
 
 
-
 const init = () => {
     setListeners()
     setVisibleSlide(0)
