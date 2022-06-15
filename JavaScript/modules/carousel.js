@@ -33,7 +33,7 @@ const getCenterPosition = (slideIndex) => {
 
 
 
- 
+
 
 const animateTransition = (active) =>{
     if(active){
@@ -88,10 +88,10 @@ const onMouseMove = (event) => {
 
 
 const onMouseUp = (event) => {
-    if(state.movement < carouselItem){
+    if(state.movement > - 50){
         setVisibleSlide(state.currentSlideIndex)
-    }else if(state.movement >  - 10){
-        setVisibleSlide(state.currentSlideIndex)
+    }else if(state.movement > lastItemIndex){
+        setVisibleSlide(state.lastItemIndex)
     } 
     const item = event.currentTarget
     item.removeEventListener('mousemove', onMouseMove)
@@ -132,7 +132,5 @@ const init = () => {
 export default {
     init
 }
-
-
 
 

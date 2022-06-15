@@ -127,3 +127,8 @@ export default {
 
 
 
+/*     if(state.movement < carouselItem){
+        setVisibleSlide(state.currentSlideIndex)
+    }else if(state.movement >  - 150){
+        setVisibleSlide(state.currentSlideIndex)
+    } */
