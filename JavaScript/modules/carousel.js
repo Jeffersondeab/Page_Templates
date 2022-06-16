@@ -88,14 +88,19 @@ const onMouseMove = (event) => {
 
 
 const onMouseUp = (event) => {
-    if(state.movement > - 50){
+    if(state.movement > 150){
+        backwardSlide()
+    }else if (state.movement < -150){
+        forwardSlide()
+    }else if(state.movement > 250){
+        removeEventListener.forwardSlide()  
+    }else{
         setVisibleSlide(state.currentSlideIndex)
-    }else if(state.movement > lastItemIndex){
-        setVisibleSlide(state.lastItemIndex)
-    } 
+    }
     const item = event.currentTarget
     item.removeEventListener('mousemove', onMouseMove)
 }
+
 
 
 const onMouseLeave = (event) => {
@@ -121,9 +126,37 @@ const setListeners = () => {
 
 
 
+const setItemsPerSlide = () => {
+    if(document.body.clientWidth < 1024){
+        itemsPerSlide = 2
+        return
+    }
+    itemsPerSlide = 5
+}
+
+const setWindowResizeListener = () => {
+    let resizeTimeOut;
+    window.addEventListener('resize', function(event){
+        clearTimeout(resizeTimeOut)
+        resizeTimeOut = setTimeout(function(){
+            setItemsPerSlide()
+            collections.forEach((_, collectionIndex) => {
+                currentCollectionIndex = collectionIndex
+                setVisibleSlide(0)
+            }) 
+        }, 1000)
+    })
+}
+
+
+
+
+
+
 
 
 const init = () => {
+    setWindowResizeListener()
     setListeners()
     setVisibleSlide(0)
 }

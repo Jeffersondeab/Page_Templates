@@ -81,22 +81,7 @@ const onMouseMove = (event) => {
     translateSlide(position)
 }
 
-const onMouseUp = (event) => {
-    if(state.movement > 150){
-        backwardSlide()
-    }else if (state.movement < -150){
-        forwardSlide()
-    }else{
-        setVisibleSlide(state.currentSlideIndex)
-    }
-    const item = event.currentTarget
-    item.removeEventListener('mousemove', onMouseMove)
-}
-
-const onMouseLeave = (event) => {
-    const item = event.currentTarget
-    item.removeEventListener('mousemove', onMouseMove)
-}
+c
 
 
 const setListeners = () => {
