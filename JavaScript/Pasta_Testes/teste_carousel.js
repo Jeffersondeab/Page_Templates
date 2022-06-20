@@ -1,9 +1,10 @@
-
+ 
 const carouselList = document.querySelector('[data-carousel="list"]')
 const carouselItem = document.querySelectorAll('[data-carousel="item"]')
 const btnNext = document.querySelector('[data-carousel="btn-next"]')
 const btnPrevious = document.querySelector('[data-carousel="btn-previous"]')
  
+
 
 const state = {
     mouseDownPosition: 0,
@@ -25,12 +26,14 @@ const getCenterPosition = (slideIndex) => {
     const item = carouselItem[state.currentItemIndex] 
     const itemWidth = item.offsetWidth
     const bodyWidth = document.body.clientWidth
-    const slideWidth = itemWidth * 5
+    const slideWidth = itemWidth * 6
     const margin = (bodyWidth - slideWidth) / 2
     return margin - (slideWidth * slideIndex)
 }
 
- 
+
+
+
 
 const animateTransition = (active) =>{
     if(active){
@@ -81,7 +84,29 @@ const onMouseMove = (event) => {
     translateSlide(position)
 }
 
-c
+
+
+
+const onMouseUp = (event) => {
+    if(state.movement > 150){
+        backwardSlide()
+    }else if (state.movement < -150){
+        forwardSlide()
+    }else{
+        setVisibleSlide(state.currentSlideIndex)
+    }
+    const item = event.currentTarget
+    item.removeEventListener('mousemove', onMouseMove)
+}
+
+
+
+const onMouseLeave = (event) => {
+    const item = event.currentTarget
+    item.removeEventListener('mousemove', onMouseMove)
+}
+
+
 
 
 const setListeners = () => {
@@ -91,10 +116,12 @@ const setListeners = () => {
         item.addEventListener('mousedown', (event) => {
                 onMouseDown(event, index)
             }),
+        
         item.addEventListener('mouseup', onMouseUp)
         item.addEventListener('mouseleave', onMouseLeave)
     })
 }
+
 
 
 
@@ -110,10 +137,3 @@ export default {
 }
 
 
-
-
-/*     if(state.movement < carouselItem){
-        setVisibleSlide(state.currentSlideIndex)
-    }else if(state.movement >  - 150){
-        setVisibleSlide(state.currentSlideIndex)
-    } */

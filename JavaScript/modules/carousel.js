@@ -1,9 +1,9 @@
-
+ 
 const carouselList = document.querySelector('[data-carousel="list"]')
 const carouselItem = document.querySelectorAll('[data-carousel="item"]')
 const btnNext = document.querySelector('[data-carousel="btn-next"]')
 const btnPrevious = document.querySelector('[data-carousel="btn-previous"]')
- 
+const collection = document.querySelectorAll('[data-carousel="collection"]')
 
 
 const state = {
@@ -16,6 +16,11 @@ const state = {
 }
 
  
+const resize = () => {
+    if(collection.bodyWidth < 1024){
+        carouselList
+    }
+}
 
 const translateSlide = (position) => {
     state.lastTranslatePosition = position
@@ -92,8 +97,6 @@ const onMouseUp = (event) => {
         backwardSlide()
     }else if (state.movement < -150){
         forwardSlide()
-    }else if(state.movement > 250){
-        removeEventListener.forwardSlide()  
     }else{
         setVisibleSlide(state.currentSlideIndex)
     }
@@ -126,37 +129,10 @@ const setListeners = () => {
 
 
 
-const setItemsPerSlide = () => {
-    if(document.body.clientWidth < 1024){
-        itemsPerSlide = 2
-        return
-    }
-    itemsPerSlide = 5
-}
-
-const setWindowResizeListener = () => {
-    let resizeTimeOut;
-    window.addEventListener('resize', function(event){
-        clearTimeout(resizeTimeOut)
-        resizeTimeOut = setTimeout(function(){
-            setItemsPerSlide()
-            collections.forEach((_, collectionIndex) => {
-                currentCollectionIndex = collectionIndex
-                setVisibleSlide(0)
-            }) 
-        }, 1000)
-    })
-}
-
-
-
-
-
-
 
 
 const init = () => {
-    setWindowResizeListener()
+    resize()
     setListeners()
     setVisibleSlide(0)
 }
