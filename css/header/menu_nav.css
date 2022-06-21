@@ -1,6 +1,7 @@
 .nav-menu{
     display: flex;
     gap: .3rem;
+    flex-wrap: nowrap;
 }
 
 .nav-menu__link{
