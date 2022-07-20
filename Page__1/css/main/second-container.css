@@ -15,20 +15,21 @@
     box-sizing: border-box;
     height: 40vh;
     width: 50vw;
-    overflow:hidden;
+    overflow: hidden;
     margin: 0 auto;
 }
 
 
 .center-slide__list{
     width: 100%;
-    animation: slide 15s infinite cubic-bezier(.5,-0.73,.59,1.77);
+    animation: slide 15s infinite;
 }
 
 .center-slide__item{
     display: block;
     height: 40vh;
     width: 100%;
+    z-index: 0;
 }
 
 .center-slide__item:nth-child(1){
@@ -36,8 +37,10 @@
 }
 
 .center-slide__item:nth-child(2){
-    background-color: yellowgreen;
+    background-color: green;
 }
+
+
 
 
 
