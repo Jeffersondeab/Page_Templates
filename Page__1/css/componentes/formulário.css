@@ -1,0 +1,23 @@
+.form-base{
+    width: 30vw;
+}
+
+.form-base__int{
+    display: flex;
+    width: 25vw;
+    margin: 0 auto;
+    padding: .7rem;
+}
+
+
+.form-base__btn{
+    padding: .5rem;
+    width: 10vw;
+}
+
+
+ 
+
+
+
+ 

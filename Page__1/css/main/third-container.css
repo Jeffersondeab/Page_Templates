@@ -3,3 +3,30 @@
     padding-top: 5rem;
     width: 80vw;
 }
+
+.contato-form{
+    display: flex;
+    width: 80vw;
+    padding-top: 5rem;
+    justify-content: center;
+}
+
+.contato{
+    margin: 3rem;
+}
+.contato p{
+   line-height: 2rem;
+}
+
+
+
+@media screen and (max-width:600px) {
+    
+    .contato-form{
+        flex-direction: column;
+    }
+
+    .form-base{
+        margin: 0 auto;
+    }
+}

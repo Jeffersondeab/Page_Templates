@@ -22,7 +22,6 @@
 
 
 .center-slide__list{
-     
     display: flex;
     width: 200vw;
     animation: slide 20s infinite;
