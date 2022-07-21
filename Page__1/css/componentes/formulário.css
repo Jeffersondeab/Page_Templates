@@ -1,19 +1,25 @@
 .form-base{
-    width: 30vw;
+    width: 35vw;
+    background-color: lightblue;
 }
 
 .form-base__int{
-    display: flex;
-    width: 25vw;
+    display: flex; 
     margin: 0 auto;
     padding: .7rem;
+    width: 25vw;
 }
 
 
 .form-base__btn{
-    padding: .5rem;
+    align-items: center;
+    display: flex;
+    height: 5vh;
+    justify-content: center; 
+    margin: 0 auto;
     width: 10vw;
 }
+
 
 
  
