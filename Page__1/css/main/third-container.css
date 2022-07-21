@@ -63,4 +63,8 @@ fieldset{
     .form-base__int{
         width: 50vw;
     }
+
+    .form-base__btn{
+        width: 20vw;
+    }
 }
