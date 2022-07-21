@@ -7,7 +7,7 @@
 .container-second__title{
     margin: 0 auto;
     width: 50vw;
-    padding-bottom: 2rem;
+    padding-bottom: 2rem; 
 }
 
 
@@ -17,19 +17,21 @@
     width: 50vw;
     overflow: hidden;
     margin: 0 auto;
+    border: 2px solid black;
 }
 
 
 .center-slide__list{
-    width: 100%;
-    animation: slide 15s infinite;
+     
+    display: flex;
+    width: 200vw;
+    animation: slide 20s infinite;
 }
 
 .center-slide__item{
     display: block;
     height: 40vh;
-    width: 100%;
-    z-index: 0;
+    width: 100vw;
 }
 
 .center-slide__item:nth-child(1){
@@ -38,6 +40,12 @@
 
 .center-slide__item:nth-child(2){
     background-color: green;
+}
+.center-slide__item:nth-child(3){
+    background-color: blue;
+}
+.center-slide__item:nth-child(4){
+    background-color: blueviolet;
 }
 
 

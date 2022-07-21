@@ -10,7 +10,13 @@
 /* main */
 
 @import url('main/image_center.css');
-@import url('main/section_1.css');
+@import url('main/first-container.css');
 @import url('main/second-container.css');
+@import url('main/third-container.css');
 @import url('componentes/arrow-slider.css');
 @import url('componentes/carousel.css');
+
+
+/* footer */
+
+@import url('footer/footer.css');
