@@ -6,18 +6,47 @@
 
 .contato-form{
     display: flex;
+    justify-content: center;
     width: 80vw;
     padding-top: 5rem;
-    justify-content: center;
 }
 
 .contato{
     margin: 3rem;
 }
+
 .contato p{
-   line-height: 2rem;
+    margin: 0 auto;
+    line-height: 2rem;
 }
 
+.form-base{
+    width: 30vw;
+    background-color: lightblue;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+fieldset{
+    border: none;
+}
+
+.form-base__int{
+    border-radius: 1rem;
+    padding: .7rem;
+    margin: .3rem auto;
+    width: 25vw;
+}
+
+
+.form-base__btn{
+    align-items: center;
+    display: flex;
+    height: 5vh;
+    justify-content: center; 
+    margin: 0 auto;
+    width: 10vw;
+}
 
 
 @media screen and (max-width:600px) {
@@ -28,6 +57,10 @@
 
     .form-base{
         margin: 0 auto;
-        width: 40vw;
+        width: 60vw;
+    }
+
+    .form-base__int{
+        width: 50vw;
     }
 }
