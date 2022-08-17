@@ -12,7 +12,6 @@ function toggleMenu(event){
     }else{
         event.currentTarget.setAttribute('aria-label','abrir menu')
     }
-    
 }
 
 
